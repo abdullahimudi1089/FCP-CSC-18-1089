@@ -1,0 +1,1 @@
+THE DESING AND IMPLEMENTATION OF E-AGRICULTURAL MARKETING SYSTEM. This system aims at connecting farmers and buyer directly, creating a user-friendly, secure, and reliable system that can facilitate the marketing of agricultural products, reduce intermediaries, and increase efficiency and profitability.
