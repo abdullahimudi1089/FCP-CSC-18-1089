@@ -88,7 +88,7 @@ if($category == 1)
 
             Please click this link to activate your account:
 
-            http://localhost/E-Agric Marketing/Login/verify.php?email=".$email;
+            http://localhost/AgroCulture/Login/verify.php?email=".$email;
 
             //$check = mail( $to, $subject, $message_body );
 
@@ -120,7 +120,7 @@ else
     	$sql = "INSERT INTO buyer (bname, busername, bpassword, bmobile, bemail, baddress)
     			VALUES ('$name','$user','$pass','$mobile','$email','$addr')";
 
-if (mysqli_query($conn, $sql))
+    	if (mysqli_query($conn, $sql))
     	{
     	    $_SESSION['Active'] = 0;
             $_SESSION['logged_in'] = true;
@@ -144,7 +144,7 @@ if (mysqli_query($conn, $sql))
 
             Please click this link to activate your account:
 
-            http://localhost/E-Agric Marketing/Login/verify.php?email=".$email;
+            http://localhost/AgroCulture/Login/verify.php?email=".$email;
 
             //$check = mail( $to, $subject, $message_body );
 

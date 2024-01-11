@@ -7,7 +7,8 @@
 
     require '../db.php';
 
-if($category == 1){
+if($category == 1)
+{
     $sql = "SELECT * FROM farmer WHERE fusername='$user'";
     $result = mysqli_query($conn, $sql);
     $num_rows = mysqli_num_rows($result);
@@ -22,8 +23,7 @@ if($category == 1){
     {
         $User = $result->fetch_assoc();
 
-        if (password_verify($_POST['pass'], $User['fpassword']))
-        {
+       
             $_SESSION['id'] = $User['fid'];
             $_SESSION['Hash'] = $User['fhash'];
             $_SESSION['Password'] = $User['fpassword'];
@@ -53,24 +53,14 @@ if($category == 1){
 
             header("location: profile.php");
         }
-        else
-        {
-            //echo mysqli_error($conn);
-            $_SESSION['message'] = "Invalid User Credentials!";
-            header("location: error.php");
-        }
+       
     }
-}
+
 else
 {
     $sql = "SELECT * FROM buyer WHERE busername='$user'";
-    error_log( $sql);
     $result = mysqli_query($conn, $sql);
-    // error_log("fetching result", $result);
-
     $num_rows = mysqli_num_rows($result);
-    error_log( $num_rows);
-
 
     if($num_rows == 0)
     {
@@ -78,18 +68,12 @@ else
         header("location: error.php");
     }
 
-    else{
-        error_log("resukt from db is greater than 1");
+    else
+    {
         $User = $result->fetch_assoc();
 
-        error_log($User['bpassword']);
-        // error_log("veryfying crredentils, new", $_POST['pass'],( $User['bpassword']));
- 
-
-        if(strval($_POST['pass']) == strval($User['bpassword']))
+        if (password_verify($_POST['pass'], $User['bpassword']))
         {
-            error_log("true, resukt is cirrect");
-
             $_SESSION['id'] = $User['bid'];
             $_SESSION['Hash'] = $User['bhash'];
             $_SESSION['Password'] = $User['bpassword'];
