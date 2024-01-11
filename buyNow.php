@@ -32,10 +32,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>: Transaction</title>
+	<title>AgroCulture: Transaction</title>
 	<meta lang="eng">
 	<meta charset="UTF-8">
-		<title>E-Agric Marketing</title>
+		<title>AgroCulture</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />

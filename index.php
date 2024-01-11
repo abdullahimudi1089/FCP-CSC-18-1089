@@ -4,7 +4,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>E-Agric Marketing</title>
+		<title>E-AGRICULTURAL MARKETING SYSTEM</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -33,7 +33,7 @@
 		<!-- Banner -->
 			<section id="banner" class="wrapper">
 				<div class="container">
-				<h2>E-Agric Marketing</h2>
+				<h2>E-AGRICULTURAL MARKETING</h2>
 				<p>Your Product Our Market</p>
 				<br><br>
 				<center>
@@ -52,29 +52,7 @@
 			</section>
 
 		<!-- One -->
-			<section id="one" class="wrapper style1 align-center">
-				<div class="container">
-					<header>
-						<h2>E-Agric Marketing</h2>
-						<p>Explore the new way of trading...</p>
-					</header>
-					<div class="row 200%">
-						<section class="4u 12u$(small)">
-							<i class="icon big rounded fa-clock-o"></i>
-							<p>Digital Market</p>
-						</section>
-						<section class="4u 12u$(small)">
-							<i class="icon big rounded fa-comments"></i>
-							<p>Agro-Blog</p>
-						</section>
-						<section class="4u$ 12u$(small)">
-							<i class="icon big rounded fa-user"></i>
-							<p>Register with us</p>
-						</section>
-					</div>
-				</div>
-			</section>
-
+			
 
 		<!-- Footer -->
 		<footer class="footer-distributed" style="background-color:black" id="aboutUs">
@@ -82,7 +60,7 @@
 			<h1 style="font: 35px calibri;">About Us</h1>
 		</center>
 		<div class="footer-left">
-			<h3 style="font-family: 'Times New Roman', cursive;">AgroCulture &copy; </h3>
+			<h3 style="font-family: 'Times New Roman', cursive;">E-AGRICULTURAL MARKETING SYSTEM &copy; </h3>
 		<!--	<div class="logo">
 				<a href="index.php"><img src="images/logo.png" width="200px"></a>
 			</div>-->
@@ -94,7 +72,7 @@
 		<div class="footer-center">
 			<div>
 				<i class="fa fa-map-marker"></i>
-				<p style="font-size:20px">E-Agric Marketing Fam<span>Vormir</span></p>
+				<p style="font-size:20px">E-AGRICULTURAL MARKETING SYSTEM Fam<span>Vormir</span></p>
 			</div>
 			<div>
 				<i class="fa fa-phone"></i>
@@ -102,14 +80,14 @@
 			</div>
 			<div>
 				<i class="fa fa-envelope"></i>
-				<p style="font-size:20px"><a href="mailto:E-Agric Marketing@gmail.com" style="color:white">demo@demo.com</a></p>
+				<p style="font-size:20px"><a href="mailto:agroculture@gmail.com" style="color:white">bash@gmail.com</a></p>
 			</div>
 		</div>
 
 		<div class="footer-right">
 			<p class="footer-company-about" style="color:white">
-				<span style="font-size:20px"><b>About E-Agric Marketing</b></span>
-				E-Agric Marketing is e-commerce trading platform for grains & grocerries...
+				<span style="font-size:20px"><b>About E-AGRICULTURAL MARKETING SYSTEM</b></span>
+				E-AGRICULTURAL MARKETING SYSTEM is e-commerce trading platform for farm product...
 			</p>
 			<div class="footer-icons">
 				<a  href="#"><i style="margin-left: 0;margin-top:5px;"class="fa fa-facebook"></i></a>
@@ -147,10 +125,7 @@
 				                            <input type="radio" id="farmer" name="category" value="1" checked>
 				                            <label for="farmer">Farmer</label>
 				                        </div>
-				                        <div class="3u 12u$(small)">
-				                            <input type="radio" id="buyer" name="category" value="0">
-				                            <label for="buyer">Buyer</label>
-				                        </div>
+				                        
 									</div>
 									<center>
 									<div class="row uniform">
@@ -219,12 +194,7 @@
                                            Farmer
                                           </label>
                                             </div>
-                                     <div class="form-check">
-                                         <input class="form-check-input" type="radio" name="category" id="flexRadioDefault2" value="0" checked>
-                                           <label class="form-check-label" for="flexRadioDefault2">
-                                             Buyer
-                                                   </label>
-                                                   </div>
+                                     
 									</div>
 									
 								<div class="row uniform">

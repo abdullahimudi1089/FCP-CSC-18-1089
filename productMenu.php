@@ -6,7 +6,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>E-Agric Marketing</title>
+		<title>AgroCulture</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -95,26 +95,28 @@
 
 					?>
 					<div class="row">
-					<?php while ($row = $result->fetch_array()): ?>
-    <div class="col-md-4">
-        <section>
-            <strong><h2 class="title" style="color: black;"><?php echo $row['product']; ?></h2></strong>
-            <a href="review.php?pid=<?php echo $row['pid']; ?>">
-                <img class="image fit" src="images/products/<?php echo $row['pimage']; ?>" height="220px;" />
-            </a>
-            <div style="text-align: left;">
-                <blockquote>
-					<?php echo "Name : ".$row['product'].' /-';?><br>
-                    <?php echo "Type: " . $row['pcat']; ?><br>
-                    <?php echo "Price: " . $row['price'] . " /-"; ?><br>
-					<?php echo "Quantity : ".$row['quantity'];?><br>
+					<?php
 
-                </blockquote>
-            </div>
-        </section>
-    </div>
-<?php endwhile; ?>
+						while($row = $result->fetch_array()):
+							$picDestination = "../Buyer/images/products/".$row['pimage'];
+						?>
+							<div class="col-md-4">
+							<section>
+							<strong><h2 class="title" style="color:black; "><?php echo $row['product'].'';?></h2></strong>
+							<a href="review.php?pid=<?php echo $row['pid'] ;?>" > <img class="image fit" src="<?php echo $picDestination;?>" height="220px;"  /></a>
 
+							<div style="align: left">
+							<blockquote>
+								<?php echo "Name : ".$row['product'].' - ';  echo "Type : ".$row['pcat'];?><br>
+								<?php echo "Price : ".$row['price'].'  - ';  echo "Quantity : ".$row['quantity'];?><br>
+							</blockquote>
+							
+
+
+						</section>
+						</div>
+
+						<?php endwhile;	?>
 
 
 					</div>

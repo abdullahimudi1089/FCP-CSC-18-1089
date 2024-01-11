@@ -37,7 +37,7 @@
             <div class="inner">
                 <div class="box">
                 <header>
-                    <span class="image left"><img src="<?php echo 'images/profileImages/'.$_SESSION['picName'].'?'.mt_rand(); ?>" class="img-circle" class="img-responsive" height="100px"></span>
+                    <span class="image left"><img src="<?php echo 'images/profileImages/'.$_SESSION['picName'].'?'.mt_rand(); ?>" class="img-circle" class="img-responsive" height="200px"></span>
                     <br>
                     <h2><?php echo $_SESSION['Name'];?></h2>
                     <h4><?php echo $_SESSION['Username'];?></h4>

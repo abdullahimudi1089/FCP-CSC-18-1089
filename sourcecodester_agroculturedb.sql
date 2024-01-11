@@ -92,8 +92,8 @@ CREATE TABLE `buyer` (
 CREATE TABLE `farmer` (
   `fid` int(255) NOT NULL,
   `fname` varchar(255) NOT NULL,
-  `fusername` varchar(255) NULL,
-  `fpassword` varchar(255) NULL,
+  `fusername` varchar(255) NOT NULL,
+  `fpassword` varchar(255) NOT NULL,
   `fhash` varchar(255) NOT NULL,
   `femail` varchar(255) NOT NULL,
   `fmobile` varchar(255) NOT NULL,
@@ -126,14 +126,14 @@ CREATE TABLE `fproduct` (
   `pinfo` varchar(255) NOT NULL,
   `price` float NOT NULL,
   `pimage` varchar(255) NOT NULL DEFAULT 'blank.png',
-  `picStatus` int(10) NOT NULL DEFAULT '0',
+  `picStatus` int(10) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `fproduct`
 --
 
-INSERT INTO `fproduct` (`fid`, `pid`, `product`, `pcat`, `pinfo`, `price`, `pimage`, `picStatus`,) VALUES
+INSERT INTO `fproduct` (`fid`, `pid`, `product`, `pcat`, `pinfo`, `price`, `pimage`, `picStatus`) VALUES
 (3, 27, 'Mango', 'Fruit', '<p>Mango raseela</p>\r\n', 500, 'Mango3.jpeg', 1),
 (3, 28, 'Ladyfinger', 'Vegetable', '<p>Its veggie</p>\r\n', 1000, 'Ladyfinger3.jpg', 1),
 (3, 29, 'Bajra', 'Grains', '<p>bajre di rti</p>\r\n', 400, 'Bajra3.jpg', 1),
@@ -189,7 +189,7 @@ CREATE TABLE `review` (
   `pid` int(10) NOT NULL,
   `name` varchar(255) NOT NULL,
   `rating` int(10) NOT NULL,
-  `comment` text NOT NULL
+  `comment` text NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -207,7 +207,7 @@ CREATE TABLE `transaction` (
   `mobile` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `pincode` varchar(255) NOT NULL,
-  `addr` varchar(255) NOT NULL
+  `addr` varchar(255) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -287,8 +287,8 @@ ALTER TABLE `farmer`
 -- AUTO_INCREMENT for table `fproduct`
 --
 ALTER TABLE `fproduct`
-  MODIFY `pid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32; 
-  ADD `quantity` DECIMAL(10, 2) NOT NULL DEFAULT 0;
+  MODIFY `pid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  ADD  `quantity` decimal NOT NULL DEFAULT=0;
 
 --
 -- AUTO_INCREMENT for table `transaction`

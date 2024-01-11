@@ -6,13 +6,6 @@
 		$_SESSION['message'] = "You have to Login to view this page!";
 		header("Location: Login/error.php");
 	}
-
-    if($_SESSION['picStatus'] == 0)
-    {
-        $_SESSION['picId'] = 0;
-        $_SESSION['picName'] = "profile0.png";
-    } 
-    
 ?>
 
 <!DOCTYPE HTML>
@@ -52,51 +45,60 @@
                 <div class="box">
                 <header>
                     <center>
-                    <!-- <img src="<?php echo 'images/profileImages/'.$_SESSION['picName'].'?'.mt_rand(); ?>"  -->
-                    <span>
-                        <img src="<?php echo 'images/profileImages/'.$_SESSION['picName'].'?'.mt_rand(); ?>" 
-                        class="image-circle" class="img-responsive" >
-                    </span>
+                    <div style="width:50%;">
+                        <div>
+                           
+                            <img src="<?php echo 'images/profileImages/'.$_SESSION['picName'].'?'.mt_rand(); ?>" 
+                            style="height:30%; width:30%; margin:10px;"
+                            >
+                        </div>  
+                    </div>
+
                     <br>
                     <h2><?php echo $_SESSION['Name'];?></h2>
                     <h4 style="color: black;"><?php echo $_SESSION['Username'];?></h4>
                     <br>
                 </center>
                 </header>
-                    <center>
-                        <div class="row" style="display:flex; align-items:center; justify-content:center;">
-                            <div class="row">
-                                <div class="col-3">
-                                    <b><font size="+1" color="black">Mobile No : </font></b>
-                                    <font size="+1"><?php echo $_SESSION['Mobile'];?></font>
-                                </div>
-    
-                                <div class="col-3">
-                                <b><font size="+1" color="black">Email ID : </font></b>
-                                <font size="+1"><?php echo $_SESSION['Email'];?></font>
-                                </div>
-    
-                                <div class="col-3">
-                                <b><font size="+1" color="black">ADDRESS : </font></b>
-                                <font size="+1"><?php echo $_SESSION['Addr'];?></font>
-                                </div>
-                            </div>
-                            
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-3">
+                            <b><font size="+1" color="black">RATINGS : </font></b>
+                            <font size="+1"><?php echo $_SESSION['Rating'];?></font>
                         </div>
-                    </center>           
-
-                        <div class="12u$" style="display:flex; align-items:center; justify-content:center; margin-top:40px">
+                        <div class="col-sm-3">
+                            <b><font size="+1" color="black">Email ID : </font></b>
+                            <font size="+1"><?php echo $_SESSION['Email'];?></font>
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-3">
+                            <b><font size="+1" color="black">Mobile No : </font></b>
+                            <font size="+1"><?php echo $_SESSION['Mobile'];?></font>
+                        </div>
+                        <div class="col-sm-3">
+                            <b><font size="+1" color="black">ADDRESS : </font></b>
+                            <font size="+1"><?php echo $_SESSION['Addr'];?></font>
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                        <div class="12u$">
                             <center>
                                 <div class="row uniform">
                                     <div class="3u 12u$(large)">
-                                        <a href="changePassPage.php" class="btn btn-danger" style="text-decoration: none; margin-right:40px">Change Password</a>
+                                        <a href="changePassPage.php" class="btn btn-danger" style="text-decoration: none;">Change Password</a>
                                     </div>
                                     <div class="3u 12u$(large)">
-                                        <a href="profileEdit.php" class="btn btn-danger" style="text-decoration: none;  margin-left: 30px">Edit Profile</a>
+                                        <a href="profileEdit.php" class="btn btn-danger" style="text-decoration: none;">Edit Profile</a>
                                     </div>
-                                    
+                                    <div class="3u 12u$(xsmall)">
+            							<a href="uploadProduct.php" class="btn btn-danger" style="text-decoration: none;">Upload Product</a>
+            						</div>
                                     <div class="3u 12u$(large)">
-                                        <a href="Login/logout.php" class="btn btn-danger" style="text-decoration: none; margin-left:30px">LOG OUT</a>
+                                        <a href="Login/logout.php" class="btn btn-danger" style="text-decoration: none;">LOG OUT</a>
                                     </div>
                                 </div>
                             </center>

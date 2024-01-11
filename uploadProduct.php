@@ -7,11 +7,12 @@
 		$productType = $_POST['type'];
 		$productName = dataFilter($_POST['pname']);
 		$productInfo = $_POST['pinfo'];
+		$productQuantity = $_POST['quantity'];
 		$productPrice = dataFilter($_POST['price']);
 		$fid = $_SESSION['id'];
 
-		$sql = "INSERT INTO fproduct (fid, product, pcat, pinfo, price)
-			   VALUES ('$fid', '$productName', '$productType', '$productInfo', '$productPrice')";
+		$sql = "INSERT INTO fproduct (fid, product, pcat, pinfo, price, quantity)
+			   VALUES ('$fid', '$productName', '$productType', '$productInfo', '$productPrice', '$productQuantity')";
 		$result = mysqli_query($conn, $sql);
 		if(!$result)
 		{
@@ -40,7 +41,7 @@
 				$picNameNew = $productName.$_SESSION['productPicId'].".".$picActualExt ;
 				$_SESSION['productPicName'] = $picNameNew;
 				$_SESSION['productPicExt'] = $picActualExt;
-				$picDestination = "images/productImages/".$picNameNew;
+				$picDestination = "../Buyer/images/products/".$picNameNew;
 				move_uploaded_file($picTmpName, $picDestination);
 				$id = $_SESSION['id'];
 
@@ -51,7 +52,7 @@
 				{
 
 					$_SESSION['message'] = "Product Image Uploaded successfully !!!";
-					header("Location: market.php");
+					header("Location: upload_sucess.php");
 				}
 				else
 				{
@@ -87,7 +88,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>E-Agric Marketing</title>
+		<title>AgroCulture</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -139,14 +140,16 @@
 						<input type="text" name="pname" id="pname" value="" placeholder="Product Name" style="background-color:white;color: black;" />
 					  </div>
 				</div>
-				<br>
-				<div>
-					<textarea  name="pinfo" id="pinfo" rows="12"></textarea>
-				</div>
+				
 			<br>
 			<div class="row">
 				<div class="col-sm-6">
-					  <input type="text" name="price" id="price" value="" placeholder="Price" style="background-color:white;color: black;" />
+					<p style="font-size:25px; margin:0px">price</p>
+					  <input type="text" name="price" id="price" value="" placeholder="0.00" style="background-color:white;color: black;" />
+				</div>
+				<div class="col-sm-6">
+				<p style="font-size:25px; margin:0px">quantity</p>
+					  <input type="text" name="quantity" id="quantity" value="" placeholder="0.00" style="background-color:white;color: black;" />
 				</div>
 				<div class="col-sm-6">
 					<button class="button fit" style="width:auto; color:black;">Submit</button>
